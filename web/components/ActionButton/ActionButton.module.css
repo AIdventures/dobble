@@ -1,0 +1,45 @@
+.actionButton {
+  align-items: center;
+  background-color: #fdebda;
+  border: 2px solid #111;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 6px 4px 0px 1px rgba(0,0,0,0.75);
+  transition: all .2s ease-out;
+}
+
+.actionButton:hover:after {
+  transform: translate(0, 0);
+}
+
+.actionButton:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.actionButton:hover {
+  outline: 0;
+  box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .actionButton {
+    padding: 0 40px;
+  }
+}
