@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <Landing />
       <Claim />
-      <Banner />
       <Finder />
+      <Banner />
     </>
   )
 }
