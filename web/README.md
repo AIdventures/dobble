@@ -2,6 +2,17 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Configure access to dataset
+
+We don't want to copy all our dataset into the web app. We are going to use a symlink to the dataset folder.
+
+```bash
+cd web/public
+ln -s $PRADO_PATH prado
+```
+
+So inside `web/public/prado` we will have an `images` folder with all the images.
+
 ## Getting Started
 
 First, run the development server:

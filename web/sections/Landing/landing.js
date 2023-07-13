@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "@/components/button";
 import ActionButton from "@/components/ActionButton/ActionButton";
 
 export default function Landing() {
