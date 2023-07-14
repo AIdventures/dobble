@@ -103,7 +103,7 @@ export default function Analysis() {
                     <Card>
                         <Title>Number of faces by gender</Title>
                         <Subtitle>
-                        The number of faces by gender, as the classes and possible biases and errors, are obtained from a <Link href="https://huggingface.co/rizvandwiki/gender-classification-2" target="_blank" className="underline">Hugging Face model</Link>.
+                            The number of faces by gender, as the classes and possible biases and errors, are obtained from a <Link href="https://huggingface.co/rizvandwiki/gender-classification-2" target="_blank" className="underline">Hugging Face model</Link>.
                         </Subtitle>
                         <BarChart
                             className="mt-6"
@@ -119,7 +119,7 @@ export default function Analysis() {
                 <Card>
                     <Title>Number of faces by age</Title>
                     <Subtitle>
-                    The number of faces by age, as the classes and possible biases and errors, are obtained from a <Link href="https://huggingface.co/nateraw/vit-age-classifier" target="_blank" className="underline">Hugging Face model</Link>.
+                        The number of faces by age, as the classes and possible biases and errors, are obtained from a <Link href="https://huggingface.co/nateraw/vit-age-classifier" target="_blank" className="underline">Hugging Face model</Link>.
                     </Subtitle>
                     <BarChart
                         className="mt-6"
@@ -131,6 +131,31 @@ export default function Analysis() {
                         maxValue={4500}
                     />
                 </Card>
+
+                <Grid numItemsMd={2} className="mt-6 gap-6 w-full">
+                    <Card>
+                        <div className="" style={{ height: "50vh" }}>
+                            <Image
+                                src="/images/inicial.jpg"
+                                alt="Analysis Original"
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-md"
+                            />
+                        </div>
+                    </Card>
+                    <Card>
+                        <div className="" style={{ height: "50vh" }}>
+                            <Image
+                                src="/images/inicial.jpg"
+                                alt="Analysis Found"
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-md"
+                            />
+                        </div>
+                    </Card>
+                </Grid>
 
             </div>
         </div>
