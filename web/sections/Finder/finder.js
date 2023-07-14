@@ -33,6 +33,7 @@ export default function Finder() {
         <p className="text-black text-2xl">
           Upload a photo of yourself where your face is clearly visible and we will find out your doppelgänger among more than 10,000 works collected from the Prado museum and 8678 faces.
         </p>
+
         <Dropzone fileHandler={predict} />
 
         {prediction &&
