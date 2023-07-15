@@ -136,7 +136,7 @@ export default function Analysis() {
                     <Card>
                         <div className="" style={{ height: "50vh" }}>
                             <Image
-                                src="/images/inicial.jpg"
+                                src="/images/jason_face.webp"
                                 alt="Analysis Original"
                                 layout="fill"
                                 objectFit="cover"
@@ -147,7 +147,7 @@ export default function Analysis() {
                     <Card>
                         <div className="" style={{ height: "50vh" }}>
                             <Image
-                                src="/images/inicial.jpg"
+                                src="/images/san_pedro_face.webp"
                                 alt="Analysis Found"
                                 layout="fill"
                                 objectFit="cover"

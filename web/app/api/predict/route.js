@@ -1,7 +1,7 @@
 // https://nextjs.org/docs/app/building-your-application/routing/router-handlers
 import { NextResponse } from "next/server";
 
-var PREDICTION_API = "http://localhost:8000/similar_face";
+var PREDICTION_API = "http://127.0.0.1:8000/similar_face";
 
 export async function GET(request) {
   // Do whatever you want
