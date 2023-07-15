@@ -7,10 +7,10 @@
 # Development
 pages/
 works/
-*.csv
+# *.csv
 *.zip
 *.html
-*.json
+# *.json
 *.psd
 
 # Mac OS

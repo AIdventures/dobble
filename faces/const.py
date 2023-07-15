@@ -34,7 +34,6 @@ CHROMADB_CLIENT = chromadb.Client(Settings(
         CHROMADB_PATH, "art", "prado", DB_NAME
     )
 ))
-CHROMADB_CLIENT.persist()
 
 print(f"Available collections: {CHROMADB_CLIENT.list_collections()}")
 
