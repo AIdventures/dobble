@@ -15,3 +15,9 @@ docker run \
     --name faces-container \
     faces-image
 ```
+
+Example of usage:
+
+```bash
+curl http://localhost:8000/similar_face/020b0867-f8de-479a-a793-d35552a5e65c.jpg
+```
