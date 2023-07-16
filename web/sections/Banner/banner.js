@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Banner() {
     return (
         <Image
-            src="/images/banner.webp"
+            src="/images/banner_low.webp"
             alt="Monalisa"
             width={1500}
             height={900}
