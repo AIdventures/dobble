@@ -60,7 +60,8 @@ def similar_face(filename: str):
     # Return the nearest face
     piece = PRADO_DF[PRADO_DF['work_id'] == nearest_face['image_id']].iloc[0]
     info = json.dumps({
-        "id": piece['work_id'],
+        "face_image_id": f"{nearest_face['image_id']}.jpg",
+        "full_image_id": piece['work_id'],
         "author": piece['author'],
         "title": piece['work_title'],
         "subtitle": piece['work_subtitle'],

@@ -41,7 +41,7 @@ export default function Finder() {
             <h2 className="text-black text-3xl">Your doppelgänger is...</h2>
             <div className="flex flex-col gap-4 items-center">
               <Image
-                src={`/prado/images/${prediction.id}`}
+                src={`/prado/images/${prediction.full_image_id}`}
                 alt={`${prediction.title} doppelgänger`}
                 width={300}
                 height={300}
