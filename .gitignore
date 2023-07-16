@@ -166,4 +166,4 @@ data/**/*.tar.Z
 
 
 # Chroma DB
-chroma_collections/
+# chroma_collections/

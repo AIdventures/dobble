@@ -18,12 +18,12 @@ df["work_id"] = df['work_image_url'].apply(lambda x: x.split('/')[-1])
 print(f"The dataframe has {len(df)} rows")
 
 
-DETECTION_MODEL = "cnn"  # hog - cnn
+DETECTION_MODEL = "hog"  # hog - cnn
 DB_NAME = os.path.join(
     "chroma_collections",
-    f"chromadb_prado_faces_{DETECTION_MODEL}"
+    f"faces_{DETECTION_MODEL}"
 )
-COLLECTION_NAME = "faces"
+COLLECTION_NAME = "embeddings"
 
 # Optional, defaults to .chromadb/ in the current directory
 client = chromadb.Client(Settings(
@@ -96,4 +96,4 @@ for _, row in tqdm(df.iterrows(), total=len(df)):
         )
 
 print(f"Items in collection: {collection.count()}")
-print(f"Finito! Errors: {errors}")
+print(f"Finito! {len(errors)} Errors: {errors}")
