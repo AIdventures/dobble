@@ -135,6 +135,10 @@ export default function Analysis() {
                 <Grid numItemsMd={2} className="mt-6 gap-6 w-full">
                     <Card>
                         <div className="" style={{ height: "50vh" }}>
+                            <div className="mt-4 absolute bottom-4 right-4 z-10 text-right">
+                                <Title className="text-white">Jason Momoa</Title>
+                                <Subtitle className="text-white italic">Actor</Subtitle>
+                            </div>
                             <Image
                                 src="/images/jason_face.webp"
                                 alt="Analysis Original"
@@ -146,10 +150,10 @@ export default function Analysis() {
                     </Card>
                     <Card>
                         <div className="" style={{ height: "50vh" }}>
-                        <div className="mt-4 absolute bottom-4 right-4 z-10 text-right">
-                            <Title className="text-white">San Pedro</Title>
-                            <Subtitle className="text-white italic">by <b>González de la Vega, Diego</b></Subtitle>
-                        </div>
+                            <div className="mt-4 absolute bottom-4 right-4 z-10 text-right">
+                                <Title className="text-white">San Pedro</Title>
+                                <Subtitle className="text-white italic">by <b>González de la Vega, Diego</b></Subtitle>
+                            </div>
                             <Image
                                 src="/images/san_pedro_face.webp"
                                 alt="Analysis Found"
