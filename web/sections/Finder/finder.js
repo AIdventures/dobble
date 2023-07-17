@@ -28,7 +28,7 @@ export default function Finder() {
 
   return (
     <div className="bg-white py-24">
-      <div className="flex flex-col gap-6 items-center w-8/12 m-auto">
+      <div data-aos="fade-down" className="flex flex-col gap-6 items-center w-8/12 m-auto">
         <h1 className="text-black text-5xl">Dobble<b>Finder</b></h1>
         <p className="text-black text-2xl">
           Upload a photo of yourself where your face is clearly visible and we will find out your doppelgänger among more than 10,000 works collected from the Prado museum and 8678 faces.

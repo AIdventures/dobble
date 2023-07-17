@@ -77,16 +77,18 @@ export default function Analysis() {
     return (
         <div className="bg-white py-24">
             <div className="flex flex-col gap-6 items-center w-8/12 m-auto">
-                <h1 className="text-black text-5xl"><b>Understanding</b> the results</h1>
-                <p className="text-black text-xl">
+                <div data-aos="fade-down">
+                <h1 className="text-black text-5xl text-center"><b>Understanding</b> the results</h1>
+                <p className="text-black text-xl pt-6">
                     A facial similarity detection model in artworks may not be entirely accurate due to the <b>biased data</b> available.
                     The data is influenced by the Museum and its artists, who predominantly depict individuals and situations from a homogenous geographical area.
                     This <b>limited diversity</b>, both ethnically and culturally, leads to a lack of representation in the dataset. We cannot observe consistent results regarding age and gender, as depicted in the following graphs, which highlight differences in these aspects.
                     This lack of representation leads to poor results when the face to match is <b>not properly represented</b> in the dataset.
                 </p>
+                </div>
 
                 <Grid numItemsMd={2} className="mt-6 gap-6">
-                    <Card>
+                    <Card data-aos="fade-up-right">
                         <Title>Number of faces by ethnicity</Title>
                         <Subtitle>
                             The number of faces by ethnicity, as the classes and possible biases and errors, are obtained from a <Link href="https://huggingface.co/cledoux42/Ethnicity_Test_v003" target="_blank" className="underline">Hugging Face model</Link>.
@@ -100,7 +102,7 @@ export default function Analysis() {
                             yAxisWidth={48}
                         />
                     </Card>
-                    <Card>
+                    <Card data-aos="fade-up-left">
                         <Title>Number of faces by gender</Title>
                         <Subtitle>
                             The number of faces by gender, as the classes and possible biases and errors, are obtained from a <Link href="https://huggingface.co/rizvandwiki/gender-classification-2" target="_blank" className="underline">Hugging Face model</Link>.
@@ -116,7 +118,7 @@ export default function Analysis() {
                     </Card>
                 </Grid>
 
-                <Card>
+                <Card data-aos="fade-up">
                     <Title>Number of faces by age</Title>
                     <Subtitle>
                         The number of faces by age, as the classes and possible biases and errors, are obtained from a <Link href="https://huggingface.co/nateraw/vit-age-classifier" target="_blank" className="underline">Hugging Face model</Link>.
