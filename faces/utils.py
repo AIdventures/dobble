@@ -83,5 +83,6 @@ def find_nearest_face(face_embedding):
     
     res = nearest_face["metadatas"][0][0]
     res["distance"] = nearest_face["distances"][0][0]
+    res["face_id"] = nearest_face["ids"][0][0]
 
     return res

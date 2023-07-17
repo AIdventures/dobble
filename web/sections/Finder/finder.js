@@ -1,7 +1,7 @@
 // https://ethanmick.com/how-to-upload-a-file-in-next-js-13-app-directory/
 'use client'
 import Dropzone from '@/components/Dropzone/Dropzone';
-import Image from 'next/image';
+import PredictionFrame from '@/components/PredictionFrame/PredictionFrame';
 import { useCallback, useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -27,7 +27,7 @@ export default function Finder() {
   }, []);
 
   return (
-    <div className="bg-white py-16">
+    <div className="bg-white py-24">
       <div className="flex flex-col gap-6 items-center w-8/12 m-auto">
         <h1 className="text-black text-5xl">Dobble<b>Finder</b></h1>
         <p className="text-black text-2xl">
@@ -37,20 +37,20 @@ export default function Finder() {
         <Dropzone fileHandler={predict} />
 
         {prediction &&
-          <div className="flex flex-col gap-4 items-center">
-            <h2 className="text-black text-3xl">Your doppelgänger is...</h2>
-            <div className="flex flex-col gap-4 items-center">
-              <Image
-                src={`/prado/images/${prediction.full_image_id}`}
-                alt={`${prediction.title} doppelgänger`}
-                width={300}
-                height={300}
-              />
-              <h3 className="text-black text-2xl">{prediction.title}</h3>
-              {/*<p className="text-black text-xl">{prediction.description}</p>*/}
-            </div>
-          </div>
+          <PredictionFrame
+            data={{
+              face_path: prediction.face_image_id,
+              picture_path: prediction.full_image_id,
+              title: prediction.title,
+              author: prediction.author,
+              width: prediction.width,
+              height: prediction.height,
+            }}
+          />
+
         }
+
+
       </div>
     </div>
   )

@@ -75,7 +75,7 @@ export default function Analysis() {
     ];
 
     return (
-        <div className="bg-white py-16">
+        <div className="bg-white py-24">
             <div className="flex flex-col gap-6 items-center w-8/12 m-auto">
                 <h1 className="text-black text-5xl"><b>Understanding</b> the results</h1>
                 <p className="text-black text-xl">
@@ -142,7 +142,7 @@ export default function Analysis() {
                             <Image
                                 src="/images/jason_face.webp"
                                 alt="Analysis Original"
-                                layout="fill"
+                                fill
                                 objectFit="cover"
                                 className="rounded-md"
                             />
@@ -157,7 +157,7 @@ export default function Analysis() {
                             <Image
                                 src="/images/san_pedro_face.webp"
                                 alt="Analysis Found"
-                                layout="fill"
+                                fill
                                 objectFit="cover"
                                 className="rounded-md"
                             />
