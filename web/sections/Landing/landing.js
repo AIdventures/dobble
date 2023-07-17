@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ActionButton from "@/components/ActionButton/ActionButton";
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function Landing() {
 
@@ -16,7 +17,9 @@ export default function Landing() {
                 </p>
 
                 {/* Use the Button component */}
-                <ActionButton>Find Me</ActionButton>
+                <ScrollLink to="finder" smooth={true} duration={750}>
+                    <ActionButton>Find Me</ActionButton>
+                </ScrollLink>
             </div>
 
             {/* Use the Image component that covers all the width */}
