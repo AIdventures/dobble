@@ -4,7 +4,6 @@ import ImageExpand from "../ImageExpand/ImageExpand";
 export default function PredictionFrame({ children, ...props }) {
 
     const data = props.data;
-    console.log(data);
 
     return (
         <div className="flex flex-col gap-6 w-full">

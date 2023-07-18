@@ -76,8 +76,8 @@ export default function Analysis() {
 
     return (
         <div className="bg-white py-24">
-            <div className="flex flex-col gap-6 items-center w-8/12 m-auto">
-                <div data-aos="fade-down">
+            <div className="flex flex-col gap-6 items-center">
+                <div data-aos="fade-down" className="flex flex-col gap-6 items-center w-10/12 md:w-8/12 m-auto">
                     <h1 className="text-black text-5xl text-center"><b>Understanding</b> the results</h1>
                     <p className="text-black text-xl pt-6">
                         A facial similarity detection model in artworks may not be entirely accurate due to the <b>biased data</b> available.
@@ -87,6 +87,7 @@ export default function Analysis() {
                     </p>
                 </div>
 
+                <div data-aos="fade-down" className="flex flex-col gap-6 items-center w-10/12 md:w-8/12 m-auto">
                 <Grid numItemsMd={2} className="mt-6 gap-6">
                     <Card data-aos="fade-up-right">
                         <Title>Number of faces by ethnicity</Title>
@@ -164,6 +165,7 @@ export default function Analysis() {
                         </div>
                     </Card>
                 </Grid>
+                </div>
 
             </div>
         </div>

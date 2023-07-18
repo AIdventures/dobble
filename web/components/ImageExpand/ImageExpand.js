@@ -7,7 +7,6 @@ import { Gallery, Item } from 'react-photoswipe-gallery'
 export default function ImageExpand(props) {
 
     const { src, alt, width, height } = props;
-    console.log(props);
 
     const [isExpanded, setIsExpanded] = useState(false);
 
