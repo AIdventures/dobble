@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Grid, Card, Title, Subtitle, Col } from "@tremor/react";
+import ImageExpand from "../ImageExpand/ImageExpand";
 
 export default function PredictionFrame({ children, ...props }) {
 
@@ -10,28 +10,26 @@ export default function PredictionFrame({ children, ...props }) {
         <div className="flex flex-col gap-6 w-full">
 
             {/* If data.width > data.height print hola else print adios */}
-            {data.width > data.height ? (
+            {data.picture_width > data.picture_height ? (
                 <>
                     <Grid numItemsMd={2} className="mt-6 gap-6 w-full">
                         <Card>
                             <div className="" style={{ height: "50vh" }}>
-                                <Image
-                                    src="/images/jason_face.webp"
-                                    alt="Analysis Original"
-                                    fill
-                                    objectFit="cover"
-                                    className="rounded-md"
+                                <ImageExpand
+                                    src={`/tmp/dobble/${data.filename}`}
+                                    alt="Analysis Found"
+                                    width={data.image_width}
+                                    height={data.image_height}
                                 />
                             </div>
                         </Card>
                         <Card>
                             <div className="" style={{ height: "50vh" }}>
-                                <Image
+                                <ImageExpand
                                     src={`/prado/faces_hog/${data.face_path}`}
                                     alt="Analysis Found"
-                                    fill
-                                    objectFit="cover"
-                                    className="rounded-md"
+                                    width={data.face_width}
+                                    height={data.face_height}
                                 />
                             </div>
                         </Card>
@@ -43,12 +41,11 @@ export default function PredictionFrame({ children, ...props }) {
                                 <Title className="text-white">{data.title}</Title>
                                 <Subtitle className="text-white italic">by <b>{data.author}</b></Subtitle>
                             </div>
-                            <Image
+                            <ImageExpand
                                 src={`/prado/images/${data.picture_path}`}
                                 alt="Analysis Found"
-                                fill
-                                objectFit="cover"
-                                className="rounded-md"
+                                width={data.picture_width}
+                                height={data.picture_height}
                             />
                         </div>
                     </Card>
@@ -63,39 +60,35 @@ export default function PredictionFrame({ children, ...props }) {
                                     <Title className="text-white">{data.title}</Title>
                                     <Subtitle className="text-white italic">by <b>{data.author}</b></Subtitle>
                                 </div>
-                                <Image
+                                <ImageExpand
                                     src={`/prado/images/${data.picture_path}`}
                                     alt="Analysis Found"
-                                    fill
-                                    objectFit="cover"
-                                    className="rounded-md"
+                                    width={data.picture_width}
+                                    height={data.picture_height}
                                 />
                             </div>
                         </Card>
                     </Col>
 
-                    {/* KPI sidebar */}
                     <Col numColSpanLg={3}>
                         <div className="space-y-6">
                             <Card>
                                 <div className="h-48">
-                                    <Image
-                                        src="/images/jason_face.webp"
+                                    <ImageExpand
+                                        src={`/tmp/dobble/${data.filename}`}
                                         alt="Analysis Found"
-                                        fill
-                                        objectFit="cover"
-                                        className="rounded-md"
+                                        width={data.image_width}
+                                        height={data.image_height}
                                     />
                                 </div>
                             </Card>
                             <Card>
                                 <div className="h-48">
-                                    <Image
+                                    <ImageExpand
                                         src={`/prado/faces_hog/${data.face_path}`}
                                         alt="Analysis Original"
-                                        fill
-                                        objectFit="cover"
-                                        className="rounded-md"
+                                        width={data.face_width}
+                                        height={data.face_height}
                                     />
                                 </div>
                             </Card>

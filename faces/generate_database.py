@@ -89,8 +89,10 @@ for _, row in tqdm(df.iterrows(), total=len(df)):
                 "fl_right": right,
                 "fl_bottom": bottom,
                 "fl_left": left,
-                "width": width,
-                "height": height
+                "fl_width": width,
+                "fl_height": height,
+                "image_width": image.shape[1],
+                "image_height": image.shape[0],
             },
             ids=[uuid.uuid4().hex]
         )

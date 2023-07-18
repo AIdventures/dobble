@@ -19,7 +19,6 @@ export default function Finder() {
         toast.error(data.error ? data.error : "Oops! Something went wrong.");
         return
       }
-      console.log(data);
       setPrediction(data);
     } catch (error) {
       toast.error("Oops! Something went wrong.");
@@ -43,13 +42,17 @@ export default function Finder() {
               picture_path: prediction.full_image_id,
               title: prediction.title,
               author: prediction.author,
-              width: prediction.width,
-              height: prediction.height,
+              face_width: prediction.face_width,
+              face_height: prediction.face_height,
+              picture_width: prediction.picture_width,
+              picture_height: prediction.picture_height,
+              image_width: prediction.image_width,
+              image_height: prediction.image_height,
+              filename: prediction.filename,
             }}
           />
 
         }
-
 
       </div>
     </div>

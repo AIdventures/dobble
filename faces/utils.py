@@ -73,7 +73,7 @@ def find_nearest_face(face_embedding):
     nearest_face = FACES_COLLECTION.query(
         face_embedding,
         n_results=1,
-        where={"width": {"$gte": MINIMUM_FACE_WIDTH }},
+        where={"fl_width": {"$gte": MINIMUM_FACE_WIDTH }},
     )
 
     # Check if a face was found

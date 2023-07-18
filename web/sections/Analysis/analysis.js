@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Grid, Card, Title, BarChart, Subtitle } from "@tremor/react";
 import Link from "next/link";
+import ImageExpand from "@/components/ImageExpand/ImageExpand";
 
 
 export default function Analysis() {
@@ -78,13 +78,13 @@ export default function Analysis() {
         <div className="bg-white py-24">
             <div className="flex flex-col gap-6 items-center w-8/12 m-auto">
                 <div data-aos="fade-down">
-                <h1 className="text-black text-5xl text-center"><b>Understanding</b> the results</h1>
-                <p className="text-black text-xl pt-6">
-                    A facial similarity detection model in artworks may not be entirely accurate due to the <b>biased data</b> available.
-                    The data is influenced by the Museum and its artists, who predominantly depict individuals and situations from a homogenous geographical area.
-                    This <b>limited diversity</b>, both ethnically and culturally, leads to a lack of representation in the dataset. We cannot observe consistent results regarding age and gender, as depicted in the following graphs, which highlight differences in these aspects.
-                    This lack of representation leads to poor results when the face to match is <b>not properly represented</b> in the dataset.
-                </p>
+                    <h1 className="text-black text-5xl text-center"><b>Understanding</b> the results</h1>
+                    <p className="text-black text-xl pt-6">
+                        A facial similarity detection model in artworks may not be entirely accurate due to the <b>biased data</b> available.
+                        The data is influenced by the Museum and its artists, who predominantly depict individuals and situations from a homogenous geographical area.
+                        This <b>limited diversity</b>, both ethnically and culturally, leads to a lack of representation in the dataset. We cannot observe consistent results regarding age and gender, as depicted in the following graphs, which highlight differences in these aspects.
+                        This lack of representation leads to poor results when the face to match is <b>not properly represented</b> in the dataset.
+                    </p>
                 </div>
 
                 <Grid numItemsMd={2} className="mt-6 gap-6">
@@ -141,12 +141,11 @@ export default function Analysis() {
                                 <Title className="text-white">Jason Momoa</Title>
                                 <Subtitle className="text-white italic">Actor</Subtitle>
                             </div>
-                            <Image
+                            <ImageExpand
                                 src="/images/jason_face.webp"
                                 alt="Analysis Original"
-                                fill
-                                objectFit="cover"
-                                className="rounded-md"
+                                width={500}
+                                height={500}
                             />
                         </div>
                     </Card>
@@ -156,12 +155,11 @@ export default function Analysis() {
                                 <Title className="text-white">San Pedro</Title>
                                 <Subtitle className="text-white italic">by <b>González de la Vega, Diego</b></Subtitle>
                             </div>
-                            <Image
+                            <ImageExpand
                                 src="/images/san_pedro_face.webp"
-                                alt="Analysis Found"
-                                fill
-                                objectFit="cover"
-                                className="rounded-md"
+                                alt="Analysis Original"
+                                width={500}
+                                height={500}
                             />
                         </div>
                     </Card>

@@ -57,6 +57,7 @@ def similar_face(filename: str):
             status_code=404
         )
     
+    
     # Return the nearest face
     piece = PRADO_DF[PRADO_DF['work_id'] == nearest_face['image_id']].iloc[0]
     info = json.dumps({
@@ -70,8 +71,13 @@ def similar_face(filename: str):
         "face_right": nearest_face['fl_right'],
         "face_bottom": nearest_face['fl_bottom'],
         "face_left": nearest_face['fl_left'],
-        "width": nearest_face['width'],
-        "height": nearest_face['height'],
+        "face_width": nearest_face['fl_width'],
+        "face_height": nearest_face['fl_height'],
+        "picture_width": nearest_face['image_width'],
+        "picture_height": nearest_face['image_height'],
+        "image_width": image.shape[1],
+        "image_height": image.shape[0],
+        "filename": filename
     }, indent=4, default=str)
 
     return Response(
