@@ -27,6 +27,14 @@ yarn dev
 pnpm dev
 ```
 
+To build the app for production, run:
+
+```bash
+npm run build
+# now with pm2 start at port 8989
+pm2 start ecosystem.config.js
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
