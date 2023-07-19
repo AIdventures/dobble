@@ -9,8 +9,6 @@ We don't want to copy all our dataset into the web app. We are going to use a sy
 ```bash
 cd web/public
 ln -s $PRADO_PATH prado
-mkdir /tmp/dobble
-ln -s /tmp/dobble tmp
 ```
 
 So inside `web/public/prado` we will have an `images` folder with all the images.

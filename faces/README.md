@@ -10,6 +10,7 @@ docker run \
     -v $PRADO_PATH:$PRADO_PATH \
     -v $CHROMADB_PATH:$CHROMADB_PATH \
     -v /tmp:/tmp \
+    -e DOBBLE_UPLOADS_PATH=$DOBBLE_UPLOADS_PATH \
     -e PRADO_PATH=$PRADO_PATH \
     -e CHROMADB_PATH=$CHROMADB_PATH \
     --name faces-container \
