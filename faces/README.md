@@ -9,8 +9,7 @@ docker run \
     -p 8000:8000 \
     -v $PRADO_PATH:$PRADO_PATH \
     -v $CHROMADB_PATH:$CHROMADB_PATH \
-    -v $DOBBLE_UPLOADS_PATH:$DOBBLE_UPLOADS_PATH \
-    -e DOBBLE_UPLOADS_PATH=$DOBBLE_UPLOADS_PATH \
+    -v /tmp/dobble:/tmp/dobble \
     -e PRADO_PATH=$PRADO_PATH \
     -e CHROMADB_PATH=$CHROMADB_PATH \
     --name faces-container \

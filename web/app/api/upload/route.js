@@ -1,8 +1,7 @@
 import { randomUUID } from 'crypto'
+import { existsSync, mkdirSync } from 'fs';
 import { writeFile } from 'fs/promises'
 import { NextResponse } from 'next/server'
-import { join } from 'path';
-
 
 var MAX_SIZE = 10 * 1024 * 1024; // 10 MB
 var ALLOWED_TYPES = ['image/png', 'image/jpg', 'image/jpeg'];
@@ -36,12 +35,14 @@ export async function POST(request) {
     // generate a random unique filename, preverving the file extension
     const filename = `${randomUUID()}.${file.name.split('.').pop()}`
 
+    // create the dir prado inside /tmp if it doesn't exist with fs
+    if (!existsSync('/tmp/dobble')) { mkdirSync('/tmp/dobble')}
+
     // With the file data in the buffer, you can do whatever you want with it.
     // For this, we'll just write it to the filesystem in a new location
-    const filePath = join(process.cwd(), 'public', 'uploads', filename);
-
-    await writeFile(filePath, buffer)
-    console.log(`open ${filePath} to see the uploaded file`)
+    const path = `/tmp/dobble/${filename}`
+    await writeFile(path, buffer)
+    console.log(`open ${path} to see the uploaded file`)
 
     return NextResponse.json({ filename: filename })
 }

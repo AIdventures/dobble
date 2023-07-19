@@ -4,10 +4,6 @@ import chromadb
 from chromadb.config import Settings
 
 
-UPLOADS_DIR = os.getenv("DOBBLE_UPLOADS_PATH")
-assert UPLOADS_DIR is not None, "Please set the env variable DOBBLE_UPLOADS_PATH"
-assert os.path.isdir(UPLOADS_DIR), "DOBBLE_UPLOADS_PATH must be a dir"
-
 PRADO_PATH = os.getenv("PRADO_PATH")
 assert PRADO_PATH is not None, "Please set the env variable PRADO_PATH"
 assert os.path.isdir(PRADO_PATH), "PRADO_PATH must be a dir"
@@ -22,6 +18,8 @@ PRADO_DF["work_id"] = PRADO_DF['work_image_url'].apply(
 )
 print(f"The dataframe has {len(PRADO_DF)} rows")
 PRADO_DF.tail()
+
+UPLOADS_DIR = '/tmp/dobble'
 
 EMBEDDING_MODEL = "large"  # "large" or "small"
 DETECTOR_MODEL = "hog"  # "cnn" or "hog"
