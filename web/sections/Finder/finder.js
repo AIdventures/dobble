@@ -9,6 +9,7 @@ export default function Finder() {
 
   const [prediction, setPrediction] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [uploadedImage, setUploadedImage] = useState(null);
 
   const predict = useCallback(async (filename) => {
     setLoading(true);
@@ -28,6 +29,11 @@ export default function Finder() {
     setLoading(false);
   }, []);
 
+  const retrieveImage = useCallback(async (imageObject) => {
+    setUploadedImage(imageObject);
+  }, []);
+
+
   return (
     <div className="bg-white py-24" id='finder'>
       <div data-aos="fade-down" className="flex flex-col gap-6 items-center w-10/12 md:w-8/12 m-auto">
@@ -37,7 +43,7 @@ export default function Finder() {
         </p>
 
         {!loading &&
-          <Dropzone fileHandler={predict} />
+          <Dropzone fileHandler={predict} imageSetter={retrieveImage} />
         }
 
         {loading &&
@@ -47,7 +53,7 @@ export default function Finder() {
           </div>
         }
 
-        {prediction &&
+        {prediction && uploadedImage &&
           <PredictionFrame
             data={{
               face_path: prediction.face_image_id,
@@ -61,6 +67,7 @@ export default function Finder() {
               image_width: prediction.image_width,
               image_height: prediction.image_height,
               filename: prediction.filename,
+              uploadedImage: uploadedImage
             }}
           />
 

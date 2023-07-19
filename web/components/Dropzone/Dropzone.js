@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { toast } from 'react-toastify';
 
 
-export default function Dropzone({ fileHandler }) {
+export default function Dropzone({ fileHandler, imageSetter }) {
 
     const [file, setFile] = useState();
 
@@ -39,8 +39,9 @@ export default function Dropzone({ fileHandler }) {
 
     useEffect(() => {
         if (!file) return
+        imageSetter(URL.createObjectURL(file))
         process_file()
-    }, [file, process_file])
+    }, [file, imageSetter, process_file])
 
     return (
         <form className="flex flex-row gap-4 text-white w-full h-64">

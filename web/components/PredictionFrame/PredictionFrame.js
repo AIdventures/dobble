@@ -15,7 +15,7 @@ export default function PredictionFrame({ children, ...props }) {
                         <Card>
                             <div className="" style={{ height: "50vh" }}>
                                 <ImageExpand
-                                    src={`/uploads/${data.filename}`}
+                                    src={data.uploadedImage}
                                     alt="Analysis Found"
                                     width={data.image_width}
                                     height={data.image_height}
@@ -74,7 +74,7 @@ export default function PredictionFrame({ children, ...props }) {
                             <Card>
                                 <div className="h-48">
                                     <ImageExpand
-                                        src={`/uploads/${data.filename}`}
+                                        src={data.uploadedImage}
                                         alt="Analysis Found"
                                         width={data.image_width}
                                         height={data.image_height}
