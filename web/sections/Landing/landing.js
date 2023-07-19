@@ -25,6 +25,7 @@ export default function Landing() {
             {/* Use the Image component that covers all the width */}
             <div data-aos="fade-left" className="w-full lg:w-6/12 2xl:w-7/12 relative">
                 <Image
+                    priority
                     src="/images/hero.webp"
                     alt="Monalisa"
                     width={1500}
