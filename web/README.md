@@ -16,6 +16,20 @@ chmod 777 /tmp/dobble/  # Adjust permissions as needed
 
 So inside `web/public/prado` we will have an `images` folder with all the images.
 
+### Solucionar Error 413: REQUEST ENTITY TOO LARGE EN NGINX
+
+Debemos editar el archivo de configuración de nginx:
+
+```
+sudo nano /etc/nginx/nginx.conf
+```
+
+Dentro del apartado http { } añadiremos la directiva que solucionará el error:
+
+```
+client_max_body_size 100M;
+```
+
 ## Getting Started
 
 First, run the development server:
