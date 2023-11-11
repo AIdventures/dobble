@@ -34,7 +34,9 @@ To build the app for production, run:
 pnpm install
 pnpm run build
 # now with pm2 start at port 8989
-pm2 start pnpm --name "dobble" -- start
+pm2 start --name "dobble" pnpm -- start 
+
+pm2 start pnpm -- start
 # Not working => pm2 start ecosystem.config.js
 ```
 
