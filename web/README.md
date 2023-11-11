@@ -9,6 +9,9 @@ We don't want to copy all our dataset into the web app. We are going to use a sy
 ```bash
 cd web/public
 ln -s $PRADO_PATH prado
+
+mkdir -p /tmp/dobble/
+chmod 777 /tmp/dobble/  # Adjust permissions as needed
 ```
 
 So inside `web/public/prado` we will have an `images` folder with all the images.
@@ -28,9 +31,10 @@ pnpm dev
 To build the app for production, run:
 
 ```bash
-npm run build
+pnpm install
+pnpm run build
 # now with pm2 start at port 8989
-pm2 start npm --name "dobble" -- start
+pm2 start pnpm --name "dobble" -- start
 # Not working => pm2 start ecosystem.config.js
 ```
 
