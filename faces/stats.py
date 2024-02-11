@@ -10,7 +10,6 @@ from const import (
     DETECTOR_MODEL
 )
 
-
 ethnicity_pipe = pipeline(
     "image-classification", model="cledoux42/Ethnicity_Test_v003"
 )
