@@ -17,7 +17,7 @@ COPY requirements.txt /tmp/
 
 # Install Python3.8
 RUN apt-get update && apt-get install -y --no-install-recommends \
-		build-essential \
+		build-essential cmake \
 		&& apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN python3.10 -m pip install --no-cache-dir --upgrade pip setuptools wheel
